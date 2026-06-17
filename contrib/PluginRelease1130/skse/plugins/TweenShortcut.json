@@ -1,0 +1,15 @@
+{
+  "DebugLogs": false,
+  "Keybinds": {
+    "Keyboard": 46,
+    "Gamepad": 279
+  },
+  "TextSettings": {
+    "Hotkeytext": "Character"
+  },
+  "ActionSettings": {
+    "EventName": "",
+    "OpenMenu": true,
+    "MenuName": "CharacterSheet"
+  }
+}
