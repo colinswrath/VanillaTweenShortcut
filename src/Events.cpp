@@ -38,6 +38,7 @@ namespace Events
 
             menu->uiMovie->Invoke("_root.TweenMenu_mc.SetShortcut", nullptr, hotkeyInit.data(), hotkeyInit.size());
         }
+        return RE::BSEventNotifyControl::kContinue;
     }
 
     RE::BSEventNotifyControl SKSEModCallbackEventHandler::ProcessEvent(const SKSE::ModCallbackEvent* a_event, RE::BSTEventSource<SKSE::ModCallbackEvent>* a_eventSource)
@@ -45,7 +46,6 @@ namespace Events
         if (!a_event) {
             return RE::BSEventNotifyControl::kContinue;
         }
-        logger::info("Recieved {}", a_event->eventName.c_str());
         if (a_event->eventName == "TweenMenu_HotkeyPress") {
             auto ui = RE::UI::GetSingleton();
 
