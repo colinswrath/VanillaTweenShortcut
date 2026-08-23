@@ -24,7 +24,7 @@ SKSEPluginLoad(const SKSE::LoadInterface* skse)
 
     logger::init();
     logger::info("{} {} is loading...", name, version);
-    SKSE::AllocTrampoline(28);
+
     auto messaging = SKSE::GetMessagingInterface();
     if (!messaging->RegisterListener(InitListener)) {
         return false;
